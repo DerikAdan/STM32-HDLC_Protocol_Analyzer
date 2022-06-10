@@ -25,6 +25,11 @@ uint8_t string_compare(char array1[], char array2[], uint16_t length)
 
 void Message_handler()
 {
+	if(string_compare(buffer, "DSR", strlen("DSR")))
+	{// Implemanta a mensagem a ser enviada pelo HC-05 caso o pino DSR esteja 'setado'.
+//		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
+		HAL_UART_Transmit(&huart2, (uint8_t*)"DSR is ON.\n", strlen("DSR is ON.\n"), 500);
+	}else
 	if(string_compare(buffer, "LED ON", strlen("LED ON")))
 	{
 		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
