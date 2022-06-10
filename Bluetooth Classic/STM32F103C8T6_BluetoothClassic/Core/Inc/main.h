@@ -62,6 +62,10 @@ void Error_Handler(void);
 #define LED_GPIO_Port GPIOC
 #define BluetoothReset_Pin GPIO_PIN_14
 #define BluetoothReset_GPIO_Port GPIOC
+#define USART2_RX_Pin GPIO_PIN_2
+#define USART2_RX_GPIO_Port GPIOA
+#define USART2_TX_Pin GPIO_PIN_3
+#define USART2_TX_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -71,5 +75,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
